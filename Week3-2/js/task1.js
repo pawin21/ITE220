@@ -16,8 +16,9 @@
 		btnDev.addEventListener("click", function() {
 		document.getElementById("dev-info");
 		document.write("Pawin Abdulla");
-		document.write("IT Student");
 		document.write("");
+		document.write("IT Student");
+		
 		});
 	}
 }
