@@ -12,9 +12,11 @@ window.onload = function() {
 			var name2 = document.getElementById("name2").value;
 			var gpa1 = document.getElementById("gpa1").value;
 			var gpa2 = document.getElementById("gpa2").value;
-			if(name1 == "") {
+			if(name1 == "" || name2=="" || gpa1=="" || gpa2=="") {
+				sweetAlert("Error");
 
 			}else {
+				self.generateGraph(name1, name2, gpa1.split(",") ,gpa2.split(","));
 				
 			}
 		},
@@ -66,10 +68,10 @@ window.onload = function() {
 
   			nv.utils.windowResize(chart.update);
 
-  	return chart;
+  			return chart;
 	});	
 
 		}
 	}
-	gpaApp.init();
+			gpaApp.init();
 }
